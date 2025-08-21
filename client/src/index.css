@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(210 83.3333% 53.3333%);
+  --primary-foreground: hsl(0 0% 100%);
+  --primary-50: hsl(211.4286 100% 95.6863%);
+  --primary-100: hsl(210.9091 100% 87.4510%);
+  --primary-500: hsl(210 83.3333% 53.3333%);
+  --primary-600: hsl(210 83.8710% 47.0588%);
+  --primary-700: hsl(209.5238 100% 34.3137%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211.5789 51.3514% 92.7451%);
+  --accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --surface-50: hsl(210 40% 98%);
+  --surface-100: hsl(210 40% 96%);
+  --surface-200: hsl(214.2857 31.8182% 91.3725%);
+  --font-sans: 'Roboto', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(203.7736 87.6033% 52.5490%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195.0000 15.3846% 94.9020%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: hsl(var(--surface-50));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .bg-surface-50 {
+    background-color: hsl(var(--surface-50));
+  }
+  
+  .bg-surface-100 {
+    background-color: hsl(var(--surface-100));
+  }
+  
+  .bg-surface-200 {
+    background-color: hsl(var(--surface-200));
+  }
+
+  .bg-primary-50 {
+    background-color: hsl(var(--primary-50));
+  }
+  
+  .bg-primary-100 {
+    background-color: hsl(var(--primary-100));
+  }
+  
+  .bg-primary-500 {
+    background-color: hsl(var(--primary-500));
+  }
+  
+  .bg-primary-600 {
+    background-color: hsl(var(--primary-600));
+  }
+  
+  .bg-primary-700 {
+    background-color: hsl(var(--primary-700));
+  }
+
+  .text-primary-500 {
+    color: hsl(var(--primary-500));
+  }
+  
+  .text-primary-600 {
+    color: hsl(var(--primary-600));
+  }
+  
+  .text-primary-700 {
+    color: hsl(var(--primary-700));
+  }
+
+  .hover\:bg-primary-600:hover {
+    background-color: hsl(var(--primary-600));
+  }
+}
